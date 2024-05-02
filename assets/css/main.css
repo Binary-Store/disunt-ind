@@ -10086,7 +10086,7 @@ START: Theme Breadcrumb CSS
   width: 100%;
   height: 100%;
   opacity: 0.9;
-  background: linear-gradient(84deg, var(--tj-color-grey-4) 0%, #010101 102.17%);
+  background: linear-gradient(5deg, var(--tj-color-grey-4) 0%, #222222 102.17%);
   mix-blend-mode: hard-light;
   z-index: -1;
 }
