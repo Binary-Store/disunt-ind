@@ -37,31 +37,6 @@
       $this.css("background-image", "url(" + $image + ")");
    });
 
-   // Preloader js
-   // function loading() {
-   //    document.querySelectorAll(".bar").forEach(function (current) {
-   //       let startWidth = 0;
-   //       const endWidth = current.dataset.size;
-   //       const interval = setInterval(frame, 20);
-   //       function frame() {
-   //          if (startWidth >= endWidth) {
-   //             clearInterval(interval);
-   //          } else {
-   //             startWidth++;
-   //             current.style.width = `${endWidth}%`;
-   //             current.firstElementChild.innerText = `${startWidth}%`;
-   //          }
-   //       }
-   //    });
-   // }
-   // // setTimeout(loading, 1000);
-   // $(window).on("load", function () {
-   //    const preloader = $(".preloader");
-   //    preloader.delay(600).fadeOut();
-   // });
-   // $(".preloader .tj-cancel-btn").on("click", function () {
-   //    $(".preloader").fadeOut();
-   // });
 
 
    // Sticky js
@@ -135,18 +110,6 @@
       );
    }
 
-   // Video Js
-   // var popupvideos = $(".popup-videos-button");
-   // if (popupvideos.length) {
-   //    $(".popup-videos-button").magnificPopup({
-   //       disableOn: 10,
-   //       type: "iframe",
-   //       mainClass: "mfp-fade",
-   //       removalDelay: 160,
-   //       preloader: false,
-   //       fixedContentPos: false,
-   //    });
-   // }
 
    // Rating Js
    if ($(".fill-ratings span").length > 0) {
@@ -154,33 +117,32 @@
       $(".star-ratings").width(star_rating_width);
    }
 
-
-   // Thumb Slider 2 Js
-   if ($(".testimonial-auother-slider").length > 0) {
-      var testimonial_auothers = new Swiper(".testimonial-auother-slider", {
-         spaceBetween: 0,
-         slidesPerView: 1,
-         allowTouchMove: false,
-      });
-   }
-
-   if ($(".thumb-content-slider").length > 0) {
-      var testimonial = new Swiper(".thumb-content-slider", {
-         spaceBetween: 0,
-         slidesPerView: 1,
-         navigation: {
-            nextEl: ".testimonial-next",
-            prevEl: ".testimonial-prev",
-         },
-         thumbs: {
-            swiper: testimonial_auothers,
-         },
-         loop: false,
-      });
-   }
-
-
-
+  // Thumb Slider 2 Js
+  if ($(".testimonial-auother-slider").length > 0) {
+   console.log("3")
+   var testimonial_auothers = new Swiper(".testimonial-auother-slider", {
+      spaceBetween: 0,
+      slidesPerView: 1,
+      allowTouchMove: false,
+   });
+   console.log("4")
+}
+if ($(".thumb-content-slider").length > 0) {
+   console.log("5")
+   var testimonial = new Swiper(".thumb-content-slider", {
+      spaceBetween: 0,
+      slidesPerView: 1,
+      navigation: {
+         nextEl: ".testimonial-next",
+         prevEl: ".testimonial-prev",
+      },
+      thumbs: {
+         swiper: testimonial_auothers,
+      },
+      loop: false,
+   });
+   console.log("6")
+}
 
 
 

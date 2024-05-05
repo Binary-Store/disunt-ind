@@ -21,7 +21,7 @@ $email = isset($data['email']) ? filter_var($data['email'], FILTER_VALIDATE_EMAI
 $message = isset($data['message']) ? htmlspecialchars(trim($data['message'])) : '';
 
     $html = "Name: <b>" . $name . "</b><br>" . "Mobile NO: " . $number . "<br>" . "Email: " . $email . "<br> Message: " . $message;
-    echo smtp_mailer('xyzabc6639@gmail.com', $name, $html);
+    echo smtp_mailer('decentindustries2000@gmail.com', $name, $html);
 
 function smtp_mailer($to, $subject, $msg)
 {

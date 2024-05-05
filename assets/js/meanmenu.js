@@ -144,7 +144,9 @@
 									jQuery('.mean-container').prepend('<div class="mean-bar"><a href="#nav" class="meanmenu-reveal" style="'+meanStyles+'">Show Navigation</a><nav class="mean-nav"></nav></div>');
 
 									//push meanMenu navigation into .mean-nav
-									var meanMenuContents = jQuery(meanMenu).html();
+									var meanMenuContents = 
+									'<ul style="column-gap:50px;"><li class="current-menu-item"><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="service.html">Services</a></li><li><a href="project.html">Products</a></li><li><a href="contact.html">Contact Us</a></li></ul>';
+									console.log(meanMenuContents);
 									jQuery('.mean-nav').html(meanMenuContents);
 
 									// remove all classes from EVERYTHING inside meanmenu nav

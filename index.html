@@ -444,7 +444,7 @@
                </div>
                <div class="row">
                   <div class="col-lg-4 col-md-6">
-                     <div class="project-item" data-bg-image="assets/images/project/project-1.webp">
+                     <div class="project-item" data-bg-image="assets/images/project/project-1.webp" data-modal-title="Ms Square Base Ball">
                         <div class="project-button tj-check-btn">
                            <a class="tj-check-btn">
                               Open<br />
@@ -457,7 +457,7 @@
                      </div>
                   </div>
                   <div class="col-lg-4 col-md-6">
-                     <div class="project-item" data-bg-image="assets/images/project/project-2.webp">
+                     <div class="project-item" data-bg-image="assets/images/project/project-2.webp" data-modal-title="CI Center Point">
                         <div class="project-button tj-check-btn">
                            <a class="tj-check-btn">
                               Open<br />
@@ -470,7 +470,7 @@
                      </div>
                   </div>
                   <div class="col-lg-4 col-md-6">
-                     <div class="project-item" data-bg-image="assets/images/project/project-3.webp">
+                     <div class="project-item" data-bg-image="assets/images/project/project-3.webp" data-modal-title="MS Square Hinges">
                         <div class="project-button tj-check-btn">
                            <a class="tj-check-btn">
                               Open<br />
@@ -483,7 +483,7 @@
                      </div>
                   </div>
                   <div class="col-lg-4 col-md-6">
-                     <div class="project-item" data-bg-image="assets/images/project/project-4.webp">
+                     <div class="project-item" data-bg-image="assets/images/project/project-4.webp" data-modal-title="Lift Wheel">
                         <div class="project-button tj-check-btn">
                            <a class="tj-check-btn">
                               Open<br />
@@ -496,7 +496,7 @@
                      </div>
                   </div>
                   <div class="col-lg-4 col-md-6">
-                     <div class="project-item" data-bg-image="assets/images/project/project-5.webp">
+                     <div class="project-item" data-bg-image="assets/images/project/project-5.webp" data-modal-title="CI Clamp Wheel">
                         <div class="project-button tj-check-btn">
                            <a class="tj-check-btn">
                               Open<br />
@@ -509,7 +509,7 @@
                      </div>
                   </div>
                   <div class="col-lg-4 col-md-6">
-                     <div class="project-item" data-bg-image="assets/images/project/project-6.webp">
+                     <div class="project-item" data-bg-image="assets/images/project/project-6.webp" data-modal-title="Gate Lock Casting (Handle)">
                         <div class="project-button tj-check-btn">
                            <a class="tj-check-btn">
                               Open<br />
@@ -770,9 +770,6 @@
                </div>
             </div>
 
-            <div class="contact-sec-shape">
-               <img src="assets/images/shapes/contact-top-shape.svg" alt="Shapes" />
-            </div>
          </section>
          <!-- end: Contact Section -->
 
@@ -877,7 +874,7 @@
             <div class="modal-dialog modal-dialog-centered modal-lg" >
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title">Product Imae</h5>
+                  <h5 class="modal-title" id="modalTitle">Product Image</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -1048,6 +1045,8 @@
          $(document).ready(function() {
               $(".project-item").click(function(){ 
                $("#modelImage").attr("src",$(this).attr("data-bg-image"))
+               var modalTitle = $(this).data("modal-title");
+               $("#modalTitle").text(modalTitle);
                $("#product-img-modal").modal("show");
               })
          });
