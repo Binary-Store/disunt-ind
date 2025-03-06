@@ -1,0 +1,375 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Video CSS
+----------------------------------------*/
+.tj-video-section {
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   position: relative;
+   z-index: 2;
+   &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(175deg, var(--tj-color-grey-4) 0.03%, var(--tj-color-grey-5) 104.24%);
+      mix-blend-mode: hard-light;
+      z-index: -1;
+   }
+   @media #{$md, $sm, $xs} {
+      padding-bottom: 80px;
+   }
+}
+
+.tj-video-section-two {
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   padding-top: 200px;
+   padding-bottom: 200px;
+   position: relative;
+   z-index: 2;
+   &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.83;
+      background: linear-gradient(254deg, var(--tj-color-grey-4) -41.69%, rgba(1, 1, 1, 0.9) 82.84%);
+      mix-blend-mode: hard-light;
+      z-index: -1;
+   }
+   .video-content-area {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      .popup-videos-button {
+         position: relative;
+         width: 195px;
+         height: 195px;
+         transform: translate(0);
+         top: 0;
+         left: 0;
+         border-radius: 50%;
+         background: rgba(255, 255, 255, 0.1);
+         backdrop-filter: blur(12.348771095275879px);
+         display: inline-block;
+         &::before {
+            position: absolute;
+            content: "";
+            display: inline-block;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 138px;
+            height: 138px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+         }
+         &::after {
+            position: absolute;
+            content: "";
+            display: inline-block;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 102px;
+            height: 102px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+         }
+         i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: var(--tj-color-common-white);
+            font-size: 35px;
+         }
+      }
+      .video-text {
+         .title {
+            font-size: 82px;
+            background: linear-gradient(180deg, var(--tj-color-common-white) 29.41%, rgba(255, 255, 255, 0) 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+         }
+      }
+   }
+   @media #{$xl, $lg} {
+      padding-top: 120px;
+      padding-bottom: 120px;
+   }
+   @media #{$md, $sm, $xs} {
+      padding-top: 80px;
+      padding-bottom: 80px;
+   }
+   @media #{$lg} {
+      .video-content-area {
+         .video-box {
+            .popup-videos-button {
+               width: 160px;
+               height: 160px;
+               &::before {
+                  width: 120px;
+                  height: 120px;
+               }
+               &::after {
+                  width: 80px;
+                  height: 80px;
+               }
+            }
+         }
+         .video-text {
+            .title {
+               font-size: 72px;
+            }
+         }
+      }
+   }
+   @media #{$md, $sm} {
+      .video-content-area {
+         gap: 20px;
+         .video-box {
+            .popup-videos-button {
+               width: 140px;
+               height: 140px;
+               &::before {
+                  width: 100px;
+                  height: 100px;
+               }
+               &::after {
+                  width: 70px;
+                  height: 70px;
+               }
+            }
+         }
+         .video-text {
+            .title {
+               font-size: 50px;
+            }
+         }
+      }
+   }
+   @media #{$xs} {
+      .video-content-area {
+         gap: 15px;
+         .video-box {
+            .popup-videos-button {
+               width: 120px;
+               height: 120px;
+               &::before {
+                  width: 85px;
+                  height: 85px;
+               }
+               &::after {
+                  width: 55px;
+                  height: 55px;
+               }
+            }
+            i {
+               font-size: 25px;
+            }
+         }
+         .video-text {
+            .title {
+               font-size: 35px;
+            }
+         }
+      }
+   }
+}
+
+.tj-video-area {
+   padding-top: 120px;
+   padding-bottom: 120px;
+   @media #{$lg, $md, $sm, $xs} {
+      padding-top: 115px;
+      padding-bottom: 80px;
+   }
+}
+
+.video-area {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   z-index: 1;
+   .title {
+      margin-bottom: 0;
+      font-size: 100px;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+      font-weight: var(--tj-fw-ebold);
+   }
+   @media #{$lg} {
+      .popup-videos-button {
+         width: 160px;
+         height: 160px;
+         &::before {
+            width: 120px;
+            height: 120px;
+         }
+         &::after {
+            width: 80px;
+            height: 80px;
+         }
+      }
+   }
+   @media #{$md, $sm} {
+      .popup-videos-button {
+         width: 140px;
+         height: 140px;
+         &::before {
+            width: 100px;
+            height: 100px;
+         }
+         &::after {
+            width: 70px;
+            height: 70px;
+         }
+      }
+      .title {
+         font-size: 75px;
+      }
+   }
+   @media #{$md, $sm} {
+      .title {
+         font-size: 55px;
+      }
+   }
+   @media #{$xs} {
+      .popup-videos-button {
+         width: 120px;
+         height: 120px;
+         &::before {
+            width: 85px;
+            height: 85px;
+         }
+         &::after {
+            width: 55px;
+            height: 55px;
+         }
+         i {
+            font-size: 25px;
+         }
+      }
+      .title {
+         font-size: 40px;
+      }
+   }
+}
+
+.popup-videos-button {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 200px;
+   height: 200px;
+   border-radius: 50%;
+   background: rgba(255, 255, 255, 0.3);
+   backdrop-filter: blur(15px);
+   &::before {
+      position: absolute;
+      content: "";
+      display: inline-block;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 138px;
+      height: 138px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+   }
+   &::after {
+      position: absolute;
+      content: "";
+      display: inline-block;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 102px;
+      height: 102px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+   }
+   i {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: var(--tj-color-common-white);
+      font-size: 35px;
+   }
+}
+
+.tj-counter-area {
+   border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.fun-fact-area {
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+.counter-item {
+   border-right: 2px solid rgba(255, 255, 255, 0.2);
+   padding: 60px 55px;
+   text-align: center;
+   &:last-child {
+      border: none;
+   }
+   .tj-count {
+      color: var(--tj-color-common-white);
+      font-size: 50px;
+      font-family: var(--tj-ff-heading);
+      font-weight: var(--tj-fw-light);
+      margin-bottom: 5px;
+   }
+   .sub-title {
+      color: var(--tj-color-common-white);
+      font-size: 22px;
+      font-family: var(--tj-ff-heading);
+      font-weight: var(--tj-fw-ebold);
+   }
+   @media #{$xl} {
+      padding: 35px 30px;
+   }
+   @media #{$lg, $md, $sm} {
+      padding: 35px 20px;
+      border: none;
+      .tj-count {
+         font-size: 35px;
+      }
+      .sub-title {
+         font-size: 20px;
+      }
+   }
+   @media #{$md, $sm} {
+      padding: 15px 20px;
+      border: none;
+   }
+   @media #{$xs} {
+      padding: 10px 20px;
+      border: none;
+      .tj-count {
+         font-size: 35px;
+      }
+      .sub-title {
+         font-size: 18px;
+      }
+   }
+}
+/* !END: Video CSS */

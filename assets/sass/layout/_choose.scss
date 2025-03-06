@@ -1,0 +1,105 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Choose CSS
+----------------------------------------*/
+.tj-choose-section {
+   padding-top: 120px;
+   padding-bottom: 120px;
+   background: var(--tj-color-light-1);
+   position: relative;
+   z-index: 2;
+   .choose-left-shapes {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      max-width: 860px;
+      width: 100%;
+      z-index: -1;
+      img {
+         width: 100%;
+      }
+   }
+   .tj-heading-three {
+      margin-bottom: 30px;
+   }
+   @media #{$md, $sm, $xs} {
+      padding-top: 80px;
+      padding-bottom: 80px;
+      .tj-heading-three {
+         margin-bottom: 20px;
+      }
+   }
+}
+
+.choose-content {
+   max-width: 700px;
+   width: 100%;
+   .desc {
+      margin-bottom: 30px;
+      p {
+         color: var(--tj-color-theme-secondary);
+         line-height: 1.9;
+         margin-bottom: 0;
+      }
+   }
+   .progress-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 60px;
+      .progress-item {
+         span {
+            display: block;
+            color: var(--tj-color-grey-13);
+            font-size: 18px;
+            font-family: var(--tj-ff-heading);
+            font-weight: var(--tj-fw-bold);
+            margin-bottom: 15px;
+         }
+      }
+   }
+   .choose-button {
+      margin-top: 40px;
+   }
+   @media #{$md, $sm, $xs} {
+      max-width: 100%;
+      margin-bottom: 50px;
+   }
+   @media #{$xs} {
+      .progress-wrapper {
+         gap: 25px;
+      }
+   }
+}
+
+.choose-images {
+   text-align: right;
+   position: relative;
+   z-index: 1;
+   &::before {
+      position: absolute;
+      content: "";
+      top: 20px;
+      right: -20px;
+      width: 65%;
+      height: 100%;
+      background: linear-gradient(180deg, var(--tj-color-theme-primary) 0%, rgba(255, 255, 255, 0) 112.93%);
+      z-index: -1;
+   }
+   @media #{$md} {
+      text-align: start;
+      &::before {
+         left: 100px;
+      }
+   }
+   @media #{$sm, $xs} {
+      text-align: start;
+      &::before {
+         width: 100%;
+         right: -15px;
+         top: 15px;
+      }
+   }
+}
+/* !END: Choose CSS */

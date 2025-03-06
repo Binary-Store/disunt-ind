@@ -1,0 +1,227 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Step CSS
+----------------------------------------*/
+.tj-steps-section {
+   padding-top: 120px;
+   padding-bottom: 120px;
+   position: relative;
+   z-index: 2;
+   .tj-heading-area {
+      margin-bottom: 60px;
+      .sec-title {
+         line-height: 1;
+      }
+   }
+   .steps-sec-left-shape {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      opacity: 30%;
+      max-width: 790px;
+      width: 100%;
+      z-index: -1;
+   }
+   .steps-sec-right-shape {
+      position: absolute;
+      right: -35px;
+      top: 50%;
+      transform: translateY(-50%);
+      max-width: 610px;
+      width: 100%;
+      z-index: -1;
+   }
+   .tabs-main-content {
+      margin-bottom: 60px;
+   }
+   @media #{$xl, $lg} {
+      .steps-sec-left-shape {
+         max-width: 350px;
+      }
+      .steps-sec-right-shape {
+         max-width: 450px;
+      }
+   }
+   @media #{$md, $sm, $xs} {
+      padding-top: 80px;
+      padding-bottom: 80px;
+      .tj-heading-area {
+         margin-bottom: 35px;
+      }
+      .steps-sec-left-shape {
+         max-width: 350px;
+      }
+      .steps-sec-right-shape {
+         max-width: 350px;
+         top: 30%;
+      }
+   }
+   @media #{$sm, $xs} {
+      .steps-sec-left-shape {
+         max-width: 250px;
+      }
+      .steps-sec-right-shape {
+         display: none;
+      }
+      .tabs-main-content {
+         margin-bottom: 35px;
+      }
+   }
+}
+
+.step-content {
+   max-width: 611px;
+   width: 100%;
+   .step-text {
+      .title {
+         margin-bottom: 15px;
+         span {
+            font-weight: var(--tj-fw-light);
+         }
+      }
+      .sub-title {
+         display: inline-block;
+         color: var(--tj-color-theme-primary);
+         font-size: 18px;
+         font-weight: var(--tj-fw-sbold);
+         font-family: var(--tj-ff-heading);
+         position: relative;
+         z-index: 1;
+         margin-bottom: 20px;
+         padding-left: 60px;
+         &::before {
+            display: inline-block;
+            position: absolute;
+            content: "";
+            width: 40px;
+            height: 2px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--tj-color-theme-primary);
+         }
+      }
+      .desc {
+         p {
+            line-height: 1.9;
+            &:last-child {
+               margin-bottom: 0;
+            }
+         }
+      }
+   }
+   .steps-button {
+      margin-top: 40px;
+   }
+   @media #{$sm, $xs} {
+      .step-text {
+         .title {
+            font-size: 25px;
+         }
+      }
+   }
+}
+
+.steps-images {
+   display: flex;
+   align-items: end;
+   justify-content: end;
+   gap: 24px;
+   .left-image {
+      max-width: 326px;
+      width: 100%;
+   }
+   .right-image {
+      max-width: 256px;
+      width: 100%;
+      padding-bottom: 20px;
+      mask-image: url(../images/shapes/steps-image-shape.svg);
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      position: relative;
+      z-index: 1;
+   }
+   @media #{$md, $sm, $xs} {
+      justify-content: center;
+      margin-bottom: 50px;
+   }
+   @media #{$sm, $xs} {
+      margin-bottom: 35px;
+   }
+}
+
+.tabs-area {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   column-gap: 60px;
+   overflow-y: auto;
+   .step {
+      opacity: 50%;
+      max-width: 200px;
+      width: 100%;
+      .number {
+         font-size: 10px;
+         font-weight: var(--tj-fw-medium);
+         display: block;
+         margin-bottom: 15px;
+         color: var(--tj-color-theme-secondary);
+      }
+      .line {
+         display: block;
+         max-width: 200px;
+         width: 100%;
+         height: 2px;
+         background: var(--tj-color-theme-primary);
+         margin-bottom: 15px;
+         position: relative;
+         z-index: 1;
+         &::before {
+            display: inline-block;
+            position: absolute;
+            content: "";
+            width: 15px;
+            height: 15px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--tj-color-theme-primary);
+            border-radius: 50%;
+            z-index: 2;
+         }
+      }
+      .title {
+         font-size: 14px;
+         font-weight: var(--tj-fw-medium);
+         font-family: var(--tj-ff-body);
+         color: var(--tj-color-theme-secondary);
+         opacity: 0;
+         visibility: hidden;
+      }
+      &.active {
+         opacity: 1;
+         .title {
+            opacity: 1;
+            visibility: visible;
+         }
+      }
+   }
+   @media #{$lg, $md, $sm} {
+      column-gap: 40px;
+   }
+   @media #{$md, $sm, $xs} {
+      justify-content: start;
+      .step {
+         .line {
+            width: 115px;
+         }
+      }
+   }
+   @media #{$sm, $xs} {
+      column-gap: 20px;
+   }
+}
+
+/* !END: Step CSS */

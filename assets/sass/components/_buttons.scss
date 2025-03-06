@@ -1,0 +1,130 @@
+@use "../utilities" as *;
+/**
+  Buttons CSS
+*/
+.tj-cancel-btn,
+.tj-primary-btn {
+   display: inline-flex;
+   align-items: center;
+   gap: 10px;
+   font-size: 15px;
+   line-height: 1;
+   color: var(--tj-color-common-white);
+   font-family: var(--tj-ff-heading);
+   font-weight: var(--tj-fw-sbold);
+   background: var(--tj-color-theme-primary);
+   padding: 15px 24px;
+   i {
+      line-height: 1;
+      color: inherit;
+   }
+   &:hover {
+      background-color: var(--tj-color-theme-secondary);
+      color: var(--tj-color-common-white);
+   }
+}
+
+.tj-secondary-btn {
+   display: inline-flex;
+   align-items: center;
+   gap: 10px;
+   font-size: 15px;
+   line-height: 1;
+   color: var(--tj-color-common-white);
+   font-family: var(--tj-ff-heading);
+   font-weight: var(--tj-fw-sbold);
+   background: var(--tj-color-theme-secondary);
+   padding: 15px 24px;
+   &.btn-2 {
+      border-radius: 2px;
+   }
+   i {
+      line-height: 1;
+      color: inherit;
+   }
+   &:hover {
+      background-color: var(--tj-color-theme-primary);
+      color: var(--tj-color-common-white);
+   }
+}
+
+.tj-secondary-btn-two {
+   display: inline-flex;
+   align-items: center;
+   gap: 10px;
+   font-size: 15px;
+   line-height: 1;
+   color: var(--tj-color-common-white);
+   font-family: var(--tj-ff-heading);
+   font-weight: var(--tj-fw-sbold);
+   background: var(--tj-color-theme-secondary);
+   padding: 15px 24px;
+   &.btn-2 {
+      border-radius: 2px;
+   }
+   i {
+      line-height: 1;
+      color: var(--tj-color-common-white);
+   }
+   &:hover {
+      background-color: var(--tj-color-common-white);
+      color: var(--tj-color-theme-secondary);
+      i {
+         color: var(--tj-color-theme-secondary);
+      }
+   }
+}
+
+.tj-light-button {
+   display: inline-flex;
+   align-items: center;
+   gap: 10px;
+   font-size: 15px;
+   line-height: 1;
+   color: var(--tj-color-theme-secondary);
+   font-family: var(--tj-ff-heading);
+   font-weight: var(--tj-fw-sbold);
+   background: var(--tj-color-light-2);
+   padding: 15px 24px;
+   i {
+      line-height: 1;
+      color: inherit;
+      color: var(--tj-color-theme-secondary);
+   }
+   &:hover {
+      background-color: var(--tj-color-theme-primary);
+      color: var(--tj-color-common-white);
+      i {
+         color: var(--tj-color-common-white);
+      }
+   }
+}
+
+.read-more-button {
+   .read-more {
+      display: flex;
+      align-items: center;
+      color: var(--tj-color-theme-secondary);
+      font-size: 15px;
+      font-family: var(--tj-ff-heading);
+      font-weight: var(--tj-fw-sbold);
+      gap: 10px;
+      @include transition(all 0.3s ease-in-out 0s);
+      i {
+         display: inline-block;
+         line-height: 1;
+         transform: rotate(-45deg);
+         color: var(--tj-color-theme-secondary);
+         @include transition(all 0.3s ease-in-out 0s);
+         position: relative;
+         top: 2px;
+      }
+      &:hover {
+         color: var(--tj-color-theme-primary);
+         i {
+            color: var(--tj-color-theme-primary);
+            transform: rotate(0deg);
+         }
+      }
+   }
+}

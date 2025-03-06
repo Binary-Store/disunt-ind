@@ -1,0 +1,75 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Counter CSS
+----------------------------------------*/
+.fun-fact-two {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-between;
+   background: var(--tj-color-grey-13);
+   padding: 60px 75px 50px;
+   position: relative;
+   z-index: 2;
+   gap: 20px;
+   .faq-bottom-shape {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+   }
+   @media #{$md, $sm, $xs} {
+      padding: 40px 20px;
+   }
+   @media #{$sm} {
+      grid-template-columns: repeat(2, 1fr);
+   }
+   @media #{$xs} {
+      grid-template-columns: repeat(1, 1fr);
+   }
+}
+
+.tj-counter-section {
+   margin-top: -110px;
+   @media #{$md, $sm, $xs} {
+      margin-top: 0;
+      padding-top: 80px;
+   }
+}
+
+.counter-item-two {
+   text-align: center;
+   position: relative;
+   z-index: 2;
+   .tj-count {
+      color: var(--tj-color-common-white);
+      font-size: 50px;
+      font-family: var(--tj-ff-heading);
+      font-weight: var(--tj-fw-bold);
+   }
+   .sub-title {
+      color: var(--tj-color-common-white);
+      font-size: 22px;
+      font-family: var(--tj-ff-heading);
+      font-weight: var(--tj-fw-light);
+   }
+   .overly-icon {
+      position: absolute;
+      top: -35px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 80px;
+      z-index: -1;
+      color: rgba(255, 255, 255, 0.1);
+   }
+   @media #{$lg, $md, $sm, $xs} {
+      .tj-count {
+         font-size: 40px;
+      }
+      .sub-title {
+         font-size: 20px;
+      }
+   }
+}
+/* !END: Counter CSS */

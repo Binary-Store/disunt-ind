@@ -1,0 +1,277 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Team CSS
+----------------------------------------*/
+.tj-team-details {
+   padding-top: 120px;
+   padding-bottom: 120px;
+   .team-details-content-area {
+      display: flex;
+      background: var(--tj-color-grey-1);
+      margin-bottom: 60px;
+      column-gap: 70px;
+      padding: 40px;
+      .team-thumb-image {
+         max-width: 565px;
+         width: 100%;
+         img {
+            width: 100%;
+         }
+      }
+   }
+   @media #{$lg, $md, $sm, $xs} {
+      .team-details-content-area {
+         column-gap: 35px;
+      }
+   }
+   @media #{$md, $sm, $xs} {
+      padding-top: 80px;
+      padding-bottom: 80px;
+      .team-details-content-area {
+         flex-wrap: wrap;
+         padding: 25px 15px;
+         .team-thumb-image {
+            max-width: 100%;
+            margin-bottom: 35px;
+         }
+      }
+   }
+}
+
+.team-details-inner {
+   max-width: 552px;
+   width: 100%;
+   .tj-heading-two {
+      margin-bottom: 20px;
+      .title {
+         margin-bottom: 5px;
+      }
+   }
+   .desc {
+      margin-bottom: 25px;
+      p {
+         line-height: 1.9;
+         &:last-child {
+            margin-bottom: 0;
+         }
+      }
+   }
+}
+
+.team-details-info {
+   display: flex;
+   align-items: center;
+   column-gap: 40px;
+   @media #{$sm, $xs} {
+      flex-wrap: wrap;
+   }
+}
+
+.team-details-item {
+   .check-list {
+      margin-bottom: 30px;
+      ul {
+         li {
+            color: var(--tj-color-text-body);
+            margin-bottom: 15px;
+         }
+      }
+   }
+   @media #{$sm, $xs} {
+      margin-bottom: 10px;
+      .check-list {
+         margin-bottom: 20px;
+      }
+   }
+}
+
+.team-contact-area {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   gap: 40px;
+   margin-bottom: 30px;
+   .contact-info-two {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      .contact-icon {
+         display: inline-flex;
+         align-items: center;
+         justify-content: center;
+         width: 40px;
+         height: 40px;
+         line-height: 1;
+         font-size: 18px;
+         color: var(--tj-color-theme-primary);
+         border: 1px solid var(--tj-color-theme-secondary);
+         border-radius: 50%;
+      }
+      span {
+         color: var(--tj-color-theme-primary);
+         font-size: 14px;
+         font-weight: var(--tj-fw-sbold);
+         display: block;
+         margin-bottom: 5px;
+      }
+      .link {
+         color: var(--tj-color-theme-secondary);
+         font-family: var(--tj-ff-heading);
+         font-weight: var(--tj-fw-bold);
+         font-size: 18px;
+         &:hover {
+            color: var(--tj-color-theme-primary);
+         }
+      }
+   }
+   @media #{$xs} {
+      gap: 25px;
+   }
+}
+
+.team-share {
+   margin-bottom: 30px;
+   ul {
+      @extend .dot-style;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 23px;
+      align-items: center;
+      li {
+         a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            line-height: 1;
+            border-radius: 50%;
+            background: var(--tj-color-theme-secondary);
+            color: var(--tj-color-common-white);
+            &:hover {
+               background: var(--tj-color-theme-primary);
+               color: var(--tj-color-common-white);
+            }
+         }
+      }
+   }
+}
+
+.tj-progress-bar {
+   width: 520px;
+   .progress-title {
+      margin-bottom: 20px;
+      .title {
+         color: var(--tj-color-theme-primary);
+         font-weight: var(--tj-fw-ebold);
+         font-size: 25px;
+      }
+   }
+   label {
+      font-size: 18px;
+      font-weight: var(--tj-fw-bold);
+      font-family: var(--tj-ff-heading);
+      color: var(--tj-color-theme-secondary);
+      display: block;
+      margin-bottom: 12px;
+   }
+   .skills {
+      background-color: var(--tj-color-grey-12);
+      height: 10px;
+      position: relative;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      span {
+         position: absolute;
+         top: -40px;
+         right: 0;
+         font-size: 22px;
+         font-weight: var(--tj-fw-bold);
+         font-family: var(--tj-ff-heading);
+         color: var(--tj-color-theme-secondary);
+      }
+      .skillbar {
+         background-color: var(--tj-color-theme-secondary);
+         width: 0px;
+         height: 10px;
+         border-radius: 15px;
+      }
+   }
+   @media #{$xs} {
+      width: 435px;
+   }
+   @media #{$sm, $xs} {
+      width: 285px;
+   }
+}
+
+.team-thumb-content {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   .team-text {
+      max-width: 560px;
+      width: 100%;
+      .title {
+         font-size: 38px;
+         margin-bottom: 10px;
+      }
+      .desc {
+         p {
+            line-height: 1.9;
+            &:last-child {
+               margin-bottom: 0;
+            }
+         }
+      }
+   }
+   .team-thumb-images {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 30px;
+      a {
+         max-width: 185px;
+         width: 100%;
+         opacity: 0.2;
+         &:hover {
+            opacity: 1;
+         }
+      }
+   }
+   @media #{$xl} {
+      .team-thumb-images {
+         a {
+            max-width: 160px;
+         }
+      }
+   }
+   @media #{$lg} {
+      .team-thumb-images {
+         gap: 20px;
+         a {
+            max-width: 110px;
+         }
+      }
+   }
+   @media #{$md, $sm, $xs} {
+      flex-wrap: wrap;
+      .team-text {
+         margin-bottom: 30px;
+      }
+   }
+   @media #{$sm, $xs} {
+      .team-text {
+         .title {
+            font-size: 28px;
+         }
+      }
+   }
+   @media #{$xs} {
+      .team-thumb-images {
+         justify-content: center;
+      }
+   }
+}
+/* !END: Team CSS */

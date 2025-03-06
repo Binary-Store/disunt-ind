@@ -1,0 +1,129 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Analysis CSS
+----------------------------------------*/
+.tj-analysis-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(175deg, var(--tj-color-grey-4) 0.03%, var(--tj-color-grey-5) 104.24%);
+        mix-blend-mode: hard-light;
+        z-index: -1;
+    }
+    &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        right: 0;
+        width: 56%;
+        height: 100%;
+        background: linear-gradient(175deg, var(--tj-color-grey-4) 0.03%, var(--tj-color-grey-5) 104.24%);
+        mix-blend-mode: hard-light;
+        z-index: -1;
+    }
+    .tj-heading-area {
+        .section-sub-title-shape {
+            background: linear-gradient(124deg, var(--tj-color-common-white) -24.32%, rgba(255, 255, 255, 0.09) 81.01%);
+        }
+        .sec-title {
+            color: var(--tj-color-common-white);
+            margin-bottom: 20px;
+        }
+        .desc {
+            margin-bottom: 20px;
+            p {
+                color: var(--tj-color-grey-1);
+                line-height: 1.9;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    @media #{$md, $sm, $xs} {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+}
+
+.analysis-content {
+    max-width: 600px;
+    width: 100%;
+    .analysis-list {
+        margin-bottom: 40px;
+        ul {
+            li {
+                font-size: 18px;
+                color: var(--tj-color-theme-primary);
+                font-family: var(--tj-ff-heading);
+                font-weight: var(--tj-fw-bold);
+                position: relative;
+                z-index: 1;
+                padding-left: 50px;
+                margin-bottom: 15px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 32px;
+                    height: 2px;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background: var(--tj-color-theme-primary);
+                }
+            }
+        }
+        .analysis-button {
+            margin-top: 40px;
+        }
+    }
+    .analysis-wrapper {
+        .title {
+            color: var(--tj-color-common-white);
+            margin-bottom: 15px;
+        }
+        .desc {
+            margin-bottom: 40px;
+            p {
+                color: var(--tj-color-grey-1);
+                line-height: 1.9;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    @media #{$sm, $xs} {
+        .analysis-list {
+            margin-bottom: 30px;
+            .analysis-button {
+                margin-top: 30px;
+            }
+        }
+        .analysis-wrapper {
+            .title {
+                font-size: 25px;
+            }
+            .desc {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+/* !END: Analysis CSS */
